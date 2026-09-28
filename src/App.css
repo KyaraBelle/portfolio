@@ -1,0 +1,297 @@
+/*---------------------------Home Page---------------------------*/
+  .home {
+    padding: 30px 20px;
+    text-align: center;
+  }
+  /*Header*/
+    .home h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    /*Hero*/
+      .homeHero {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .homeHero h1 {
+        margin-bottom: 20px;
+      }
+      .homeHero p {
+        font-size: 22px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+      }
+/*-----------------------------Nav Bar-----------------------------*/
+  /*Page Buttons*/
+    .navBox a {
+      text-decoration: none;
+      color: var(--text);
+    }
+    .navBox nav a:hover{
+      color:pink;
+    }
+  /*Website Top (logo, title, pages)*/
+    .navBox{
+      background-image: url("/KyaraMcQueen.png");
+      background-size: 120px;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-color: transparent;
+      padding-top:50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  /*Pages */
+    .navBox nav{
+      display: flex;
+      gap: 24px;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: solid pink;
+    }
+/*-------------------------------Button----------------------------*/
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: pink;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: #ff9ecf; 
+    box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+  }
+/*--------------------------Projects Page--------------------------*/
+  .projects {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .projects h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .projectsHero {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      align-items: center;
+    }
+/*Cards*/
+    .projectsCard {
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      text-align: center;
+      border-left: 6px solid var(--accent);
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 600px;
+    }
+    .projectsImg {
+      width: 100%;
+      max-width: 350px;
+      border-radius: var(--radius);
+      margin-bottom: 15px;  
+    }
+    .projectsCard h2 {
+      margin-bottom: 12px;
+      font-size: 26px;
+    }
+    .projectsCard p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+/*-----------------------------Education---------------------------*/
+  .education {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .education h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .educationHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+/*Cards*/
+    .eduCard {
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      width: 320px;
+      text-align: left;
+      border-left: 6px solid var(--accent);
+    }
+    .eduImg {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: var(--radius);
+      margin-bottom: 15px;
+    }
+    .eduCard h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .eduCard p {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+/*--------------------------Services Page--------------------------*/
+  .services {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .services h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .servicesHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+/*Cards*/
+    .servicesCard {
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      width: 320px;
+      text-align: left;
+      border-left: 6px solid var(--accent);
+    }
+    .serviceImg{
+      height: 150px;
+    }
+    .servicesCard h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .servicesCard p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+/*--------------------------Contact Page--------------------------*/
+  .contact {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .contact h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .contactHero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+/*My Contact*/
+    .contactInfo {
+      background-color: white;
+      padding: 20px;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 400px;
+      text-align: left;
+      border-left: 6px solid var(--accent);
+    }
+    .contactInfo p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+/*Form*/
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+    .contactForm label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  /*-Input*/
+      .contactForm input, .contactForm textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+      }
+      .contactForm textarea {
+        height: 120px;
+        resize: none;
+      }
+  /*-Button*/
+      .contactBtn {
+        background-color: pink;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .contactBtn:hover {
+        background-color: rgba(180, 179, 179, 0.786);
+    }
+/*----------------------------About Page--------------------------*/
+  .about {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+  }
+/*Header*/
+    .aboutText h1 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+/*Hero*/
+    .aboutHero {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 900px;
+    }
+/*Profile Image*/
+    .aboutImg {
+      height: 200px;
+      width: 200px;
+      object-fit: contain;
+      border-radius: var(--radius);
+    }
+/*Text*/
+    .aboutText p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      max-width: 500px;
+    }
