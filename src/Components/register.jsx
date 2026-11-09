@@ -35,6 +35,7 @@ const Register = () => {
                     console.log("Token saved");
                 } else {
                     console.error('Error:', data.message);
+                    return;
                 }
 
         } catch (error) {
@@ -50,9 +51,7 @@ const Register = () => {
 
         {/*Hero section */}
             <div className="registerHero">
-                <p>
-                    Please enter your credentials to register for your account.
-                </p>
+               
 
                  {/*Form */}
                 <form className="registerForm" action="/" onSubmit={handleSubmit}>
