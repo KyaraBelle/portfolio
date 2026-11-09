@@ -51,6 +51,7 @@ const Register = () => {
 
         {/*Hero section */}
             <div className="registerHero">
+                <p> </p>
                
 
                  {/*Form */}

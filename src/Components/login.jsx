@@ -1,7 +1,46 @@
 import {Link} from "react-router-dom";
+import { useState } from "react";
 
-//Login Page- form for user authentication
 const Login = () => {
+    {/*Backend Logic */}
+      const [formData, setFormData] = useState({
+            email: '',
+            password: ''
+        });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('/api/signin', { 
+                method: 'POST', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify({ 
+                    email: formData.email, 
+                    password: formData.password }) });
+
+                const data = await response.json();
+
+               if (response.ok) {
+                 localStorage.setItem('token', data.token);
+                    console.log("Token saved");
+                    window.location.href = '/';
+                } else {
+                    console.error('Error:', data.message);
+                    return;
+                }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+
+    {/*Page */}
     return (
         <div className="login">
         {/*Page header/welcome message */}
@@ -9,17 +48,15 @@ const Login = () => {
 
         {/*Hero section */}
             <div className="loginHero">
-                <p>
-                    Please enter your credentials to access your account.
-                </p>
+               
 
                   {/*Form */}
-                <form className="loginForm" action="/">
+                <form className="loginForm" action="/" onSubmit={handleSubmit}>
                     <label>Email Address</label>
-                    <input type="email" name="email" required/>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required/>
 
                     <label>Password</label>
-                    <input type="password" name="password" required/>
+                    <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
 
                 {/*Submit Button- sends home */}
                     <button type="login" className="loginBtn">Login</button>
