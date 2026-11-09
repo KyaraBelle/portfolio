@@ -6,6 +6,9 @@ import Projects from './Components/projects';
 import Education from './Components/education';
 import Services from './Components/services';
 import Contact from './Components/contact';
+import Login from './Components/login';
+import Register from './Components/register';
+
 
 const MainRouter = () => {
     return (
@@ -18,6 +21,8 @@ const MainRouter = () => {
                 <Route path="/education" element={<Education />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </div>
     )

@@ -295,3 +295,115 @@
       line-height: 1.6;
       max-width: 500px;
     }
+
+
+      .login {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .login h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .loginHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+        /*Form*/
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+    .loginForm label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  /*-Input*/
+      .loginForm input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+      }
+     
+  /*-Button*/
+      .loginBtn {
+        background-color: pink;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .loginBtn:hover {
+        background-color: rgba(180, 179, 179, 0.786);
+    }
+-----------------------------------------------
+          .register {
+    padding: 30px 20px;
+    text-align: center;
+  }
+/*Header*/
+    .register h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+/*Hero*/
+    .registerHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    /*Form*/
+    .registerForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+    .registerForm label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  /*-Input*/
+      .registerForm input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+      }
+     
+  /*-Button*/
+      .registerBtn {
+        background-color: pink;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .registerBtn:hover {
+        background-color: rgba(180, 179, 179, 0.786);
+    }
