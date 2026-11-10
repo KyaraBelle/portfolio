@@ -1,13 +1,20 @@
-//Education Page- Header and two education listings each with 
-    // img, program, institution, years, and credential
+import { useState } from "react";
+import { Link } from "react-router-dom";
 const Education = () => {
+    const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    
     return (
         <div className="education">
         {/*Header */}
             <h1>Education</h1>
+
+             {/*Button for logged in*/}
+                {isAuthenticated && (
+                    <Link to="/eduForm" className="addEduBtn">Add Education</Link>
+                )}
         {/*Hero section holding 2 education listings in 'cards' */}
             <div className="educationHero">
-
+                
             {/*Education 1: Software Engineering */}
                 <div className="eduCard">
                     <img src="centennial.png" alt="Software Engineering" className="eduImg"/>

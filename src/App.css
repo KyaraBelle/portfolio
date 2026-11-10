@@ -113,6 +113,23 @@
       line-height: 1.5;
       margin-bottom: 10px;
     }
+     .addProjectBtn {
+      display: inline-block;
+      background-color: pink;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      margin-top:-10px;
+      margin-bottom: -20px;
+    }
+    .addProjectBtn:hover {
+      background-color: var(--accent2);
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+    }
 /*-----------------------------Education---------------------------*/
   .education {
     padding: 30px 20px;
@@ -154,6 +171,20 @@
     .eduCard p {
       margin-bottom: 8px;
       font-size: 16px;
+    }
+    .addEduBtn {
+      background-color: pink;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+    }
+    .addEduBtn:hover {
+      background-color: var(--accent2);
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
     }
 /*--------------------------Services Page--------------------------*/
   .services {
@@ -429,5 +460,127 @@
         font-size: 16px;
     }
     .registerBtn:hover {
+        background-color: rgba(180, 179, 179, 0.786);
+    }
+
+    /*----------------------------Projects Form Page--------------------------*/
+    .projectsF {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    /*Header*/
+    .projectsF h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  
+
+/*Hero*/
+    .projectsFormHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    /*Form*/
+    .projectsForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+    .projectsForm label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  /*-Input*/
+      .projectsForm input, .projectsForm textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+      }
+      .projectsForm textarea {
+        height: 120px;
+        resize: none;
+      }
+  /*-Button*/
+      .projectsFormBtn {
+        background-color: pink;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .projectsFormBtn:hover {
+        background-color: rgba(180, 179, 179, 0.786);
+    }
+
+ /*----------------------------Education Form Page--------------------------*/
+    .eduF {
+      padding: 30px 20px;
+      text-align: center;
+    }
+    /*Header*/
+    .eduF h1 {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  
+
+/*Hero*/
+    .eduFormHero {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    /*Form*/
+    .eduForm {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+    .eduForm label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  /*-Input*/
+      .eduForm input, .eduForm textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: var(--radius);
+        font-size: 16px;
+      }
+      .eduForm textarea {
+        height: 120px;
+        resize: none;
+      }
+  /*-Button*/
+      .eduFormBtn {
+        background-color: pink;
+        padding: 12px;
+        border: none;
+        border-radius: var(--radius);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .eduFormBtn:hover {
         background-color: rgba(180, 179, 179, 0.786);
     }

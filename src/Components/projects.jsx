@@ -1,12 +1,21 @@
 //Projects Page- Header and 3 Projects each with 
     // img, title, desc, role, and outcome
+import { useState } from "react";
+import { Link } from "react-router-dom";
 const Projects = () => {
+    const [isAuthenticated] = useState(!!localStorage.getItem('token'));
     return (
         <div className="projects">
         {/*Header */}
             <h1>My Projects</h1>
         {/* Hero section holding all 3 projects in 'cards'*/}
             <div className="projectsHero">
+
+                {/*Button for logged in*/}
+                {isAuthenticated && (
+                    <Link to="/projectsForm" className="addProjectBtn">Add Project</Link>
+                )}
+                
 
             {/*Project 1: Pokemon Website */}
                 <div className="projectsCard">

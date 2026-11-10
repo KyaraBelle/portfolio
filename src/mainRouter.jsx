@@ -8,6 +8,8 @@ import Services from './Components/services';
 import Contact from './Components/contact';
 import Login from './Components/login';
 import Register from './Components/register';
+import ProjectsForm from './Components/projectsForm';
+import EduForm from './Components/eduForm';
 
 
 const MainRouter = () => {
@@ -23,6 +25,8 @@ const MainRouter = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/projectsForm" element={<ProjectsForm />} />
+                <Route path="/eduForm" element={<EduForm />} />
             </Routes>
         </div>
     )
