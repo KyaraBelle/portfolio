@@ -1,12 +1,20 @@
 import {Link} from "react-router-dom";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     {/*Backend Logic */}
       const [formData, setFormData] = useState({
             email: '',
             password: ''
         });
+
+    const [message, setMessage] = useState('');
+
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -30,9 +38,11 @@ const Login = () => {
                if (response.ok) {
                  localStorage.setItem('token', data.token);
                     console.log("Token saved");
+                    //  setMessage("Login successful, token saved");
                     window.location.href = '/';
                 } else {
                     console.error('Error:', data.message);
+                    setMessage(data.message);
                     return;
                 }
         } catch (error) {
@@ -66,6 +76,7 @@ const Login = () => {
                     <Link to="/register" className="regBtn">
                       Register here
                     </Link>
+                     <p>{message}</p>
                 </form>
 
                 

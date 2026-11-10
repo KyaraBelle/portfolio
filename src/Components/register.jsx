@@ -1,13 +1,20 @@
 import {Link} from "react-router-dom";
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 {/*Backend Logic */}
 const Register = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const [formData, setFormData] = useState({
         fullname: '',
         email: '',
         password: ''
     });
+
+    const [message, setMessage] = useState('');
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,11 +39,15 @@ const Register = () => {
 
                if (response.ok) {
                  localStorage.setItem('token', data.token);
-                    console.log("Token saved");
+                    setMessage("Registration successful");
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 1000);
                 } else {
                     console.error('Error:', data.message);
+                    setMessage(data.message);
                     return;
-                }
+                } 
 
         } catch (error) {
             console.error('Error:', error);
@@ -67,6 +78,7 @@ const Register = () => {
 
                 {/*Submit Button- sends home */}
                     <button type="submit" className="registerBtn">Register</button>
+                    <p>{message}</p>
                 </form>
             </div>
         </div>
