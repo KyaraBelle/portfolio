@@ -4,6 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const Contact = () => {
     const navigate = useNavigate();
     const location = useLocation();
+     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
     
     {/*Backend Logic */}
     const [formData, setFormData] = useState({
@@ -62,6 +63,12 @@ const Contact = () => {
         <div className="contact">
         {/*Header */}
             <h1>Contact Me</h1>
+
+        {/*Button for logged in*/}
+            {isAuthenticated && (
+                <Link to="/viewContact" className="viewContactBtn">View Forms</Link>
+            )}
+
         {/*Hero section holding contact info and form */}
             <div className="contactHero">
 

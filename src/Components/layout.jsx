@@ -20,7 +20,6 @@ const Layout = () => {
                 <Link to="/contact">Contact</Link> |
                 {!token && <Link to="/login">Login</Link>}
                 {token && <Link to="/" className="outBtn" onClick={handleLogout}>Logout</Link>}
-                
             </nav>
             <hr />
         </div>

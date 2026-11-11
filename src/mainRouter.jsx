@@ -10,6 +10,7 @@ import Login from './Components/login';
 import Register from './Components/register';
 import ProjectsForm from './Components/projectsForm';
 import EduForm from './Components/eduForm';
+import ViewContact from './Components/viewContact';
 
 
 const MainRouter = () => {
@@ -27,6 +28,7 @@ const MainRouter = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/projectsForm" element={<ProjectsForm />} />
                 <Route path="/eduForm" element={<EduForm />} />
+                <Route path="/viewContact" element={<ViewContact />} />
             </Routes>
         </div>
     )

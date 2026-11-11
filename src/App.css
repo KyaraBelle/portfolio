@@ -297,6 +297,25 @@
     .contactBtn:hover {
         background-color: rgba(180, 179, 179, 0.786);
     }
+
+    .viewContactBtn {
+      background-color: pink;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      display: inline-block;
+      margin-bottom: 20px;
+      margin-top: -10px;
+      
+    }
+    .viewContactBtn:hover {
+      background-color: var(--accent2);
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+    }
 /*----------------------------About Page--------------------------*/
   .about {
     padding: 30px 20px;
@@ -584,3 +603,115 @@
     .eduFormBtn:hover {
         background-color: rgba(180, 179, 179, 0.786);
     }
+   /* ------------------------------------*/
+/*--------------------------View Contact Page--------------------------*/
+.viewContact {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Header */
+.viewContact h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* Hero */
+.viewContactHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Containers */
+.getByID_container,
+.getAll_container {
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent);
+}
+
+/* Search Form */
+.ConID {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ConID label {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+}
+
+.ConID input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+}
+
+/* Buttons */
+.conIDBtn,
+.getAllBtn {
+    background-color: pink;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.conIDBtn:hover,
+.getAllBtn:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+/* Single Contact Card */
+.contactResultCard {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent2);
+    text-align: left;
+}
+
+.contactResultCard h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.contactResultCard p {
+    margin: 8px 0;
+}
+
+/* All Contacts Section */
+.allContacts {
+    margin-top: 20px;
+}
+
+.allContacts h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact Cards */
+.contactCard {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent2);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.contactCard p {
+    margin: 8px 0;
+}
