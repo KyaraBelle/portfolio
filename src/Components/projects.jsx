@@ -1,9 +1,30 @@
 //Projects Page- Header and 3 Projects each with 
     // img, title, desc, role, and outcome
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 const Projects = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    const [projects, setProjects] = useState([]);
+    useEffect(()=> {
+        fetchProjects();
+    }, []);
+    const fetchProjects = async ()=>{
+        try{
+            const response = await fetch("/api/projects", {
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`
+                }
+            });
+            const data = await response.json();
+            if (response.ok){
+                console.log(data);
+                setProjects(data);
+            }
+        } catch (error){
+            console.error(error);
+        }
+    }
+
     return (
         <div className="projects">
         {/*Header */}
@@ -14,6 +35,10 @@ const Projects = () => {
                 {/*Button for logged in*/}
                 {isAuthenticated && (
                     <Link to="/projectsForm" className="addProjectBtn">Add Project</Link>
+                )}
+
+                {isAuthenticated && (
+                    <Link to="/viewProjects" className="viewProjectsBtn">Edit Projects</Link>
                 )}
                 
 
@@ -43,7 +68,27 @@ const Projects = () => {
                     <p><strong>Role: </strong>Designed the gallery layout and built the pop-up image viewer, including the close button and the “add to favourites” feature that lets users save the pictures they love. </p>
                     <p><strong>Outcome: </strong>Created a photo viewer where the users can enlarge a picture and add to a favourites section, making the page interactive and organized. </p>
                 </div>
-            </div>
+        </div>
+               
+
+                {projects.map((project)=>(
+                    <div key={project._id} className="NewprojectsCard">
+                        <img src="NewProject.png" alt="New Project" className="NewprojectsImg"/>
+                        <h2>{project.title}</h2>
+                        <p>{project.description}</p>
+
+        <p>
+            <strong>Role: </strong>
+            {project.role}
+        </p>
+
+        <p>
+            <strong>Outcome: </strong>
+            {project.outcome}
+        </p>
+                    </div>
+                ))}
+            
         </div>
     )
 }

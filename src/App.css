@@ -823,3 +823,167 @@
     font-weight: bold;
     color: var(--accent);
 }
+
+/*-------------------------------*/
+/*Cards*/
+    .NewprojectsCard {
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+      margin: 0 auto 25px auto;
+      text-align: center;
+      border-left: 6px solid var(--accent);
+      box-shadow: var(--shadow);
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+    .NewprojectsImg {
+      width: 100%;
+      max-width: 350px;
+      border-radius: var(--radius);
+      margin-bottom: 15px;  
+    }
+    .NewprojectsCard h2 {
+     
+      margin-bottom: 12px;
+      font-size: 26px;
+    }
+    .NewprojectsCard p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    /*------------------------------------------------*/
+    /*************************
+    View Projects Page
+*************************/
+
+.viewProjects {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.projectSearchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent);
+    margin: 0 auto 30px auto;
+}
+
+.projectSearchForm label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.projectSearchForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+}
+
+.projectSearchForm button {
+    background-color: pink;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.projectSearchForm button:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+.projectResultCard {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.projectResultCard h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.projectResultCard p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.projectResultCard label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.projectResultCard input,
+.projectResultCard textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.projectResultCard textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.projectActions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.updateBtn,
+.deleteBtn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.updateBtn {
+    background-color: pink;
+}
+
+.updateBtn:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+.deleteBtn {
+    background-color: var(--accent2);
+    color: white;
+}
+
+.deleteBtn:hover {
+    opacity: 0.85;
+}
+
+.message {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
