@@ -715,3 +715,111 @@
 .contactCard p {
     margin: 8px 0;
 }
+/*--------------------------------------------------------*/
+.contactActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.updateBtn,
+.deleteBtn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+    display:flex;
+    margin-top:15px;
+    
+}
+
+.updateBtn {
+    background-color: pink;
+}
+
+.deleteBtn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.updateBtn:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+.deleteBtn:hover {
+    background-color: #e74c3c;
+}
+/*----------------------------------------------------------*/
+/* Edit Contact Form */
+.contactResultCard label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contactResultCard input,
+.contactResultCard textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contactResultCard textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* Button Layout */
+.contactActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Edit / Save Button */
+.updateBtn {
+    background-color: pink;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+}
+
+.updateBtn:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+/* Delete / Cancel Button */
+.deleteBtn {
+    background-color: var(--accent2);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+}
+
+.deleteBtn:hover {
+    opacity: 0.85;
+}
+
+/* Success / Error Messages */
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--accent);
+}
