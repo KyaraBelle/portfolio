@@ -987,3 +987,195 @@
     margin-bottom: 20px;
     color: var(--accent);
 }
+
+/*-------------------------------------------*/
+/*Cards*/
+    .NeweducationCard {
+      background-color: white;
+      padding: 25px;
+      border-radius: var(--radius);
+      width: 320px;
+      text-align: left;
+      border-left: 6px solid var(--accent);
+      margin-top: 30px;
+      margin-bottom:30px;
+      
+    }
+    .NeweducationImg {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: var(--radius);
+      margin-bottom: 15px;
+    }
+    .NeweducationCard h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    .NeweducationCard p {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    /*Hero*/
+    .newEducationContainer {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    /*-------------------------------------------*/
+    /*************************
+    View Education Page
+*************************/
+
+.viewEducation {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.educationSearchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent);
+    margin: 0 auto 30px auto;
+}
+
+.educationSearchForm label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.educationSearchForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+}
+
+.educationSearchForm button {
+    background-color: pink;
+    padding: 12px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.educationSearchForm button:hover {
+    background-color: rgba(180, 179, 179, 0.786);
+}
+
+.educationResultCard {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    border-left: 6px solid var(--accent);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.educationResultCard h2 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.educationResultCard p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.educationResultCard label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.educationResultCard input,
+.educationResultCard textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.educationResultCard textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.educationActions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.educationActions .updateBtn,
+.educationActions .deleteBtn {
+    flex: 1;
+}
+
+.message {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+/*---------------------*/
+  .viewProjectsBtn {
+      display: inline-block;
+      background-color: pink;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      margin-top:-10px;
+      margin-bottom: -20px;
+    }
+    .viewProjectsBtn:hover {
+      background-color: var(--accent2);
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+    }
+    
+      .viewEducationBtn {
+      display: inline-block;
+      background-color: pink;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      margin-top:-10px;
+      margin-bottom: -20px;
+      
+    }
+    .viewEducationBtn:hover {
+      background-color: var(--accent2);
+      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+    }
+
+    .addEduBtn, .viewEducationBtn {
+    display: inline;
+    justify-content: center;
+    gap: 25px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 20px;
+}

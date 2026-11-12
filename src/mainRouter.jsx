@@ -12,6 +12,7 @@ import ProjectsForm from './Components/projectsForm';
 import EduForm from './Components/eduForm';
 import ViewContact from './Components/viewContact';
 import ViewProjects from './Components/viewProjects';
+import ViewEducation from './Components/viewEducation';
 
 
 const MainRouter = () => {
@@ -31,6 +32,7 @@ const MainRouter = () => {
                 <Route path="/eduForm" element={<EduForm />} />
                 <Route path="/viewContact" element={<ViewContact />} />
                 <Route path="/viewProjects" element={<ViewProjects />}/>
+                <Route path="/viewEducation" element={<ViewEducation />}/>
             </Routes>
         </div>
     )

@@ -1,7 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 const Education = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    const [education, setEducation] = useState([]);
+     useEffect(()=> {
+            fetchEducation();
+        }, []);
+        const fetchEducation = async ()=>{
+            try{
+                const response = await fetch("/api/education", {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem("token")}`
+                    }
+                });
+                const data = await response.json();
+                if (response.ok){
+                    console.log(data);
+                    setEducation(data);
+                }
+            } catch (error){
+                console.error(error);
+            }
+        }
     
     return (
         <div className="education">
@@ -12,6 +32,11 @@ const Education = () => {
                 {isAuthenticated && (
                     <Link to="/eduForm" className="addEduBtn">Add Education</Link>
                 )}
+
+                {isAuthenticated && (
+                    <Link to="/viewEducation" className="viewEducationBtn">Edit Education</Link>
+                )}
+
         {/*Hero section holding 2 education listings in 'cards' */}
             <div className="educationHero">
 
@@ -33,6 +58,29 @@ const Education = () => {
                     <p><strong>Credential: </strong>Ontario College Certificate</p>
                 </div>
             </div>
+
+            <div className="newEducationContainer">{education.map((education)=>(
+                    <div key={education._id} className="NeweducationCard">
+                        <img src="NewEdu.png" alt="New Education" className="NeweducationImg"/>
+                        <h2>{education.program}</h2>
+                        
+
+        <p>
+            <strong>Institution: </strong>
+            {education.school}
+        </p>
+
+        <p>
+            <strong>Years: </strong>
+            {education.years}
+        </p>
+        <p>
+            <strong>Credential: </strong>
+            {education.credential}
+        </p>
+                    </div>
+                ))}
+                </div>
         </div>
     )
 }
