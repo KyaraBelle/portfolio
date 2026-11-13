@@ -19,7 +19,7 @@ const ViewEducation = () => {
     e.preventDefault();
 
     if (!formData.input.trim()) {
-        setMessage("Please enter a Education ID.");
+        setMessage("Please enter an Education ID.");
         return;
     }
 
@@ -41,7 +41,7 @@ const ViewEducation = () => {
             setIsEditing(false);
         } else {
             setEducation(null);
-            setMessage("Education not found.");
+            setMessage(data.message);
         }
     } catch (error) {
         console.error(error);
@@ -106,9 +106,6 @@ const ViewEducation = () => {
 
     return (
         <div className="viewEducation">
-            {message && (
-                <p className="message">{message}</p>
-            )}
             
             <form onSubmit={handleSubmit} className="educationSearchForm">
 
@@ -124,6 +121,8 @@ const ViewEducation = () => {
     <button type="submit">
         Search
     </button>
+
+   {message && (<p className="message">{message}</p>)}
 
 </form>
             {education && (

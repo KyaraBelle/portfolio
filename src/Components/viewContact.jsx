@@ -119,6 +119,7 @@ const ViewContact = () => {
 
             {/*Hero section */}
             <div className="viewContactHero">
+             
                  {/*Get Contact by ID */}
                 <div className="getByID_container">
 

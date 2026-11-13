@@ -106,9 +106,6 @@ const ViewProjects = () => {
 
     return (
         <div className="viewProjects">
-            {message && (
-                <p className="message">{message}</p>
-            )}
             
             <form onSubmit={handleSubmit} className="projectSearchForm">
 
@@ -124,7 +121,9 @@ const ViewProjects = () => {
     <button type="submit">
         Search
     </button>
-
+   {message && (
+                <p className="message">{message}</p>
+            )}
 </form>
             {project && (
         <div className="projectResultCard">
