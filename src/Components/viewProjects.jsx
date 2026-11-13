@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../api";
 
 const ViewProjects = () => {
         const [isAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -24,7 +25,7 @@ const ViewProjects = () => {
 
     try {
         const response = await fetch(
-            `/api/projects/${formData.input}`, 
+            `${API_URL}/api/projects/${formData.input}`, 
             {
         headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -53,7 +54,7 @@ const ViewProjects = () => {
             return;
         }
         try {
-            const response = await fetch(`/api/projects/${project._id}`, {
+            const response = await fetch(`${API_URL}/api/projects/${project._id}`, {
                 method: "PUT",
                 headers: { 
                         'Content-Type': 'application/json' ,
@@ -81,7 +82,7 @@ const ViewProjects = () => {
             return;
         }
         try {
-            const response = await fetch(`/api/projects/${project._id}`, {
+            const response = await fetch(`${API_URL}/api/projects/${project._id}`, {
                 method: "DELETE",
                 headers: { 
                         'Content-Type': 'application/json' ,

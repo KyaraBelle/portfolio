@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../api";
 const ViewContact = () => {
     const [formData, setFormData] = useState({
         input: ""
@@ -24,7 +25,7 @@ const ViewContact = () => {
                 setContact(null);
                 return;
             }
-            const response = await fetch(`/api/contacts/${formData.input}`, {
+            const response = await fetch(`${API_URL}/api/contacts/${formData.input}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' }
             });
@@ -52,7 +53,7 @@ const ViewContact = () => {
             return;
         }
         try{
-            const response = await fetch("/api/contacts");
+            const response = await fetch(`${API_URL}/api/contacts`);
             const data = await response.json();
             if (response.ok) {
                 setContacts(data);
@@ -68,7 +69,7 @@ const ViewContact = () => {
             return;
         }
         try{
-            const response = await fetch(`/api/contacts/${contact._id}`, {
+            const response = await fetch(`${API_URL}/api/contacts/${contact._id}`, {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(contact)
@@ -92,7 +93,7 @@ const ViewContact = () => {
             return;
         }
         try{
-            const response = await fetch(`/api/contacts/${contact._id}`, {
+            const response = await fetch(`${API_URL}/api/contacts/${contact._id}`, {
                 method: "DELETE"
             })
             const data = await response.json();

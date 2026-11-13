@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { API_URL } from "../api";
 
 const EduForm = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -23,7 +24,7 @@ const EduForm = () => {
              const handleSubmit = async (e) => {
                  e.preventDefault();
                  try {
-                     const response = await fetch('/api/education', { 
+                     const response = await fetch(`${API_URL}/api/education`, { 
                          method: 'POST', 
                          headers: { 
                              'Content-Type': 'application/json' ,

@@ -2,6 +2,7 @@
     // img, title, desc, role, and outcome
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../api";
 const Projects = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
     const [projects, setProjects] = useState([]);
@@ -10,7 +11,7 @@ const Projects = () => {
     }, []);
     const fetchProjects = async ()=>{
         try{
-            const response = await fetch("/api/projects", {
+            const response = await fetch(`${API_URL}/api/projects`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 }

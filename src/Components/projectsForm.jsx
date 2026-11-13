@@ -1,6 +1,7 @@
 //Projects Page- Header and 3 Projects each with 
     // img, title, desc, role, and outcome
 import { useState } from "react";
+import { API_URL } from "../api";
 
 const ProjectsForm = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -25,7 +26,7 @@ const ProjectsForm = () => {
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
-                const response = await fetch('/api/projects', { 
+                const response = await fetch(`${API_URL}/api/projects`, { 
                     method: 'POST', 
                     headers: { 
                         'Content-Type': 'application/json' ,

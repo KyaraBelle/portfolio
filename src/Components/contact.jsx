@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { API_URL } from "../api";
 const Contact = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,7 +27,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('/api/contacts', { 
+            const response = await fetch(`${API_URL}/api/contacts`, { 
                 method: 'POST', 
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

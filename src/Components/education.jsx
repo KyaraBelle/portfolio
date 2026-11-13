@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../api";
 const Education = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
     const [education, setEducation] = useState([]);
@@ -8,7 +9,7 @@ const Education = () => {
         }, []);
         const fetchEducation = async ()=>{
             try{
-                const response = await fetch("/api/education", {
+                const response = await fetch(`${API_URL}/api/education`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
                     }
