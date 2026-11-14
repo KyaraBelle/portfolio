@@ -7,6 +7,7 @@
     .home h1 {
       margin-top: 0;
       margin-bottom: 40px;
+      line-height: normal;
     }
     /*Hero*/
       .homeHero {
@@ -51,7 +52,15 @@
       font-weight: 500;
       border-bottom: solid pink;
     }
-
+@media (max-width: 768px) {
+  .navBox nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;;
+  }
+}
  
 /*-------------------------------Button----------------------------*/
   .btn {
@@ -186,6 +195,35 @@
       background-color: var(--accent2);
       box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
     }
+/*New Education*/
+    .newEducationContainer {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+/*Authorized buttons*/
+.addEduBtn, .viewEduBtn{
+  text-decoration: none;
+  background-color: pink;
+  color:white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius:10px;
+margin: 0;
+
+}
+.addEduBtn:hover, .viewEduBtn:hover{
+  background-color: var(--accent2);
+  box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
+}
+.authEduBtn{
+  display: inline-flex;
+  gap: 30px;
+  align-items: center;
+  
+}
 /*--------------------------Services Page--------------------------*/
   .services {
     padding: 30px 20px;
@@ -326,12 +364,14 @@
     .aboutText h1 {
       margin-top: 0;
       margin-bottom: 15px;
+      line-height: normal;
+      
     }
 /*Hero*/
     .aboutHero {
-      display: flex;
+      
       align-items: center;
-      gap: 30px;
+     
       max-width: 900px;
     }
 /*Profile Image*/
@@ -345,7 +385,8 @@
     .aboutText p {
       margin-bottom: 20px;
       line-height: 1.6;
-      max-width: 500px;
+      max-width: auto;
+      padding-top: 10px;
     }
 /*----------------------------Login Page--------------------------*/
       .login {
@@ -989,41 +1030,7 @@
 }
 
 /*-------------------------------------------*/
-/*Cards*/
-    .NeweducationCard {
-      background-color: white;
-      padding: 25px;
-      border-radius: var(--radius);
-      width: 320px;
-      text-align: left;
-      border-left: 6px solid var(--accent);
-      margin-top: 30px;
-      margin-bottom:30px;
-      
-    }
-    .NeweducationImg {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      border-radius: var(--radius);
-      margin-bottom: 15px;
-    }
-    .NeweducationCard h2 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-    .NeweducationCard p {
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-    /*Hero*/
-    .newEducationContainer {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+
 
     /*-------------------------------------------*/
     /*************************
@@ -1033,6 +1040,7 @@
 .viewEducation {
     padding: 30px 20px;
     text-align: center;
+    
 }
 
 .educationSearchForm {
@@ -1151,31 +1159,5 @@
       background-color: var(--accent2);
       box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
     }
-    
-      .viewEducationBtn {
-      display: inline-block;
-      background-color: pink;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
-      margin-top:-10px;
-      margin-bottom: -20px;
-      
-    }
-    .viewEducationBtn:hover {
-      background-color: var(--accent2);
-      box-shadow: 0 6px 14px rgba(255, 182, 193, 0.5);
-    }
-
-    .addEduBtn, .viewEducationBtn {
-    display: inline;
-    justify-content: center;
-    gap: 25px;
-    margin-left:20px;
-    margin-right:20px;
-    margin-bottom: 20px;
-}
+    /*----------------------------------------------------------*/
+  

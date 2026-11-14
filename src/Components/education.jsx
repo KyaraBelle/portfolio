@@ -30,19 +30,21 @@ const Education = () => {
         {/*Header */}
             <h1>Education</h1>
 
+            <div className="authEduBtn">
              {/*Buttons for Admin*/}
                 {isAdmin && (
                     <Link to="/eduForm" className="addEduBtn">Add Education</Link>
                 )}
 
                 {isAdmin && (
-                    <Link to="/viewEducation" className="viewEducationBtn">Edit Education</Link>
+                    <Link to="/viewEducation" className="viewEduBtn">Edit Education</Link>
                 )}
 
             {/*Button for Logged in*/}
                 {isAuthenticated  && !isAdmin&&(
-                    <Link to="/viewEducation" className="viewEducationBtn">Search Education</Link>
+                    <Link to="/viewEducation" className="viewEduBtn">Search Education</Link>
                 )}
+            </div>
 
         {/*Hero section holding 2 education listings in 'cards' */}
             <div className="educationHero">
@@ -67,8 +69,8 @@ const Education = () => {
             </div>
 
             <div className="newEducationContainer">{education.map((education)=>(
-                    <div key={education._id} className="NeweducationCard">
-                        <img src="NewEdu.png" alt="New Education" className="NeweducationImg"/>
+                    <div key={education._id} className="eduCard">
+                        <img src="NewEdu.png" alt="New Education" className="eduImg"/>
                         <h2>{education.program}</h2>
                         
 
