@@ -3,6 +3,7 @@ import { API_URL } from "../api";
 
 const ViewProjects = () => {
         const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+        const isAdmin = localStorage.getItem("isAdmin") === "true";
     const [project, setProject] = useState(null);
     const [message, setMessage] = useState("");
     const [isEditing, setIsEditing] = useState(false);
@@ -139,7 +140,7 @@ const ViewProjects = () => {
                     <p><strong>Project Outcome:</strong> {project.outcome}</p>
 
                     <div className="projectActions">
-
+                        {isAdmin && (
                         <button
                             type="button"
                             className="updateBtn"
@@ -147,7 +148,8 @@ const ViewProjects = () => {
                         >
                             Edit Project
                         </button>
-
+                        )}
+                        {isAdmin &&(
                         <button
                             type="button"
                             className="deleteBtn"
@@ -155,7 +157,7 @@ const ViewProjects = () => {
                         >
                             Delete Project
                         </button>
-
+                        )}
                     </div>
                 </>
             ) : (
@@ -208,6 +210,7 @@ const ViewProjects = () => {
                         }
                     />
 
+                    {isAdmin&& (
                     <div className="projectActions">
 
                         <button
@@ -230,6 +233,7 @@ const ViewProjects = () => {
                         </button>
 
                     </div>
+                    )}
                 </>
             )}
 

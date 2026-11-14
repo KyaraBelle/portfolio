@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { API_URL } from "../api";
 const ViewContact = () => {
+    const isAdmin = localStorage.getItem("isAdmin") === "true";
     const [formData, setFormData] = useState({
         input: ""
     });
@@ -145,13 +146,18 @@ const ViewContact = () => {
                                     <p>Email: {contact.email}</p>
                                     <p>Message: {contact.message}</p>
 
+                                    {isAdmin&&(
                                     <button type="button" className="updateBtn" onClick={()=> setIsEditing(true)}>
                                         Edit Contact
                                     </button>
+                                    )}
 
+
+                                    {isAdmin&&(
                                     <button type="button" className="deleteBtn" onClick={deleteContact}>
                                         Delete Contact
                                     </button>
+                                    )}
                                 </>
                             ) : (
                                 <>
@@ -177,6 +183,7 @@ const ViewContact = () => {
                                     <input type="textarea" value={contact.message} onChange={(e) =>
                                             setContact({...contact, message: e.target.value}) }/>
 
+                                    {isAdmin&&(
                                     <div className="contactActions">
                                         <button type="button" className="updateBtn" onClick={()=>{
                                             updateContact();
@@ -188,7 +195,8 @@ const ViewContact = () => {
                                         <button type="button" className="deleteBtn" onClick={()=> setIsEditing(false)}>
                                             Cancel
                                         </button>
-                                    </div>     
+                                    </div>
+                                    )}     
                                 </>
                             )}
                             
@@ -199,7 +207,9 @@ const ViewContact = () => {
 
                 </div>
              {/*Get All Contacts */} 
+              {isAdmin&&(
                 <div className="getAll_container">
+                   
                     <button 
                         type="button" 
                         className="getAllBtn" 
@@ -224,8 +234,9 @@ const ViewContact = () => {
                             ))}
                         </div>
                     )}
-
+               
                 </div>
+                 )}
 
             </div>
         </div>

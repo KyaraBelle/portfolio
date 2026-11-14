@@ -3,6 +3,7 @@ import { API_URL } from "../api";
 
 const ViewEducation = () => {
         const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+        const isAdmin = localStorage.getItem("isAdmin") === "true";
     const [education, setEducation] = useState(null);
     const [message, setMessage] = useState("");
     const [isEditing, setIsEditing] = useState(false);
@@ -139,7 +140,7 @@ const ViewEducation = () => {
                     <p><strong>Credential:</strong> {education.credential}</p>
 
                     <div className="educationActions">
-
+                        {isAdmin&&(
                         <button
                             type="button"
                             className="updateBtn"
@@ -147,7 +148,8 @@ const ViewEducation = () => {
                         >
                             Edit Education
                         </button>
-
+                        )}
+                        {isAdmin&&(
                         <button
                             type="button"
                             className="deleteBtn"
@@ -155,7 +157,7 @@ const ViewEducation = () => {
                         >
                             Delete Education
                         </button>
-
+                        )}
                     </div>
                 </>
             ) : (
@@ -210,6 +212,7 @@ const ViewEducation = () => {
                         }
                     />
 
+                    {isAdmin&&(
                     <div className="educationActions">
 
                         <button
@@ -232,6 +235,7 @@ const ViewEducation = () => {
                         </button>
 
                     </div>
+                    )}
                 </>
             )}
 

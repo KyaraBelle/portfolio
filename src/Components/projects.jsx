@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { API_URL } from "../api";
 const Projects = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    const isAdmin = localStorage.getItem("isAdmin") === "true";
     const [projects, setProjects] = useState([]);
     useEffect(()=> {
         fetchProjects();
@@ -33,13 +34,18 @@ const Projects = () => {
         {/* Hero section holding all 3 projects in 'cards'*/}
             <div className="projectsHero">
 
-                {/*Button for logged in*/}
-                {isAuthenticated && (
+                {/*Buttons For Admin*/}
+                {isAdmin && (
                     <Link to="/projectsForm" className="addProjectBtn">Add Project</Link>
                 )}
 
-                {isAuthenticated && (
+                {isAdmin && (
                     <Link to="/viewProjects" className="viewProjectsBtn">Edit Projects</Link>
+                )}
+
+                {/*Button for Logged in*/}
+                 {isAuthenticated && !isAdmin&& (
+                    <Link to="/viewProjects" className="viewProjectsBtn">Search Projects</Link>
                 )}
                 
 

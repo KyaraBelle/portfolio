@@ -3,6 +3,16 @@ import { API_URL } from "../api";
 
 const EduForm = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+     const isAdmin = localStorage.getItem("isAdmin") === "true";
+
+    if (!isAdmin){
+        return (
+            <div className="projectF">
+                <h1>Access Denied</h1>
+                <p>Only administrators can create educations.</p>
+            </div>
+        );
+    }
      const [message, setMessage] = useState("");
 
       {/*Backend Logic */}

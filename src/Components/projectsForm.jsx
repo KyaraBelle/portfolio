@@ -5,6 +5,16 @@ import { API_URL } from "../api";
 
 const ProjectsForm = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    const isAdmin = localStorage.getItem("isAdmin") === "true";
+
+    if (!isAdmin){
+        return (
+            <div className="projectF">
+                <h1>Access Denied</h1>
+                <p>Only administrators can create projects.</p>
+            </div>
+        );
+    }
     const [message, setMessage] = useState("");
    
      {/*Backend Logic */}
@@ -87,7 +97,7 @@ const ProjectsForm = () => {
                     <textarea id="projectOutcome" name="projectOutcome" value={formData.projectOutcome} onChange={handleChange} required></textarea>
                     <button type="submit" className="projectsFormBtn">Submit Project</button>
                 </form>
-
+            
               
 
          

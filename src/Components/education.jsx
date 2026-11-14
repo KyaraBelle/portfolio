@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { API_URL } from "../api";
 const Education = () => {
     const [isAuthenticated] = useState(!!localStorage.getItem('token'));
+    const isAdmin = localStorage.getItem("isAdmin") === "true";
     const [education, setEducation] = useState([]);
      useEffect(()=> {
             fetchEducation();
@@ -29,13 +30,18 @@ const Education = () => {
         {/*Header */}
             <h1>Education</h1>
 
-             {/*Button for logged in*/}
-                {isAuthenticated && (
+             {/*Buttons for Admin*/}
+                {isAdmin && (
                     <Link to="/eduForm" className="addEduBtn">Add Education</Link>
                 )}
 
-                {isAuthenticated && (
+                {isAdmin && (
                     <Link to="/viewEducation" className="viewEducationBtn">Edit Education</Link>
+                )}
+
+            {/*Button for Logged in*/}
+                {isAuthenticated  && !isAdmin&&(
+                    <Link to="/viewEducation" className="viewEducationBtn">Search Education</Link>
                 )}
 
         {/*Hero section holding 2 education listings in 'cards' */}

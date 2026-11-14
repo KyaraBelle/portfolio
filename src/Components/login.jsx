@@ -39,9 +39,12 @@ const Login = () => {
 
                if (response.ok) {
                  localStorage.setItem('token', data.token);
+                 localStorage.setItem('isAdmin', data.isAdmin);
                     console.log("Token saved");
+                    console.log("Admin?", data.isAdmin);
                     //  setMessage("Login successful, token saved");
-                    window.location.href = '/';
+                        if (data.isAdmin){console.log("Signed in as Admin.")}
+                   window.location.href = '/';
                 } else {
                     console.error('Error:', data.message);
                     setMessage(data.message);
