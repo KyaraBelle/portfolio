@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 const Layout = () => {
     const token = localStorage.getItem('token');
     const handleLogout = () => {
+        localStorage.removeItem('isAdmin');
         localStorage.removeItem('token');
         window.location.href = '/';
     }
